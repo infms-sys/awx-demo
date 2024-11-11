@@ -1,0 +1,14 @@
+---
+- name: Gather facts from Windows servers and save to Linux host
+  hosts: windows
+  gather_facts: yes
+  tasks:
+    - name: Save gathered facts to a file on the control node
+      local_action:
+        module: copy
+        content: "{{ ansible_facts | to_nice_json }}"
+        dest: "/home/nikola/win_ssh/logs/{{ inventory_hostname }}_facts.json"
+      delegate_to: localhost
+      run_once: false
+
+
