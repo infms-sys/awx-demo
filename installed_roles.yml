@@ -1,0 +1,15 @@
+---
+- name: Check installed roles on Windows Server
+  hosts: windows_servers
+  gather_facts: no
+  tasks:
+    - name: List all installed roles and features
+      win_feature:
+        name: '*'
+        state: present
+      register: installed_roles
+
+    - name: Display installed roles and features
+      debug:
+        var: installed_roles
+
