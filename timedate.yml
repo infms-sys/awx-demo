@@ -1,6 +1,6 @@
 ---
 - name: Check date and time on Windows Server
-  hosts: 3.72.63.107
+  hosts: *
   gather_facts: no
   tasks:
     - name: Get current date and time
