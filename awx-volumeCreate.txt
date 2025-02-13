@@ -15,7 +15,6 @@ sudo vi test.yaml
 groups
 sudo chown -R :nikola /var/lib/awx/projects
 sudo chmod -R 770 /var/lib/awx/projects
-sudo chmod -R 770 /var/lib/awx/projects
 ls -ld /var/lib/awx/projects
 sudo chmod g+s /var/lib/awx/projects
 which awx
@@ -69,7 +68,9 @@ cd home/nikola
 cd /home/nikola/
 ls
 kubectl get pvc -n awx
-kubectl delete pvc awxubectl get pv
+kubectl delete pvc awx-projects-claim -n awx
+kubectl delete pv awx-pv
+kubectl get pv
 kubectl delete pv awx-pv
 kubectl edit pv awx-pv
 kubectl delete pv awx-pv
@@ -95,12 +96,6 @@ kubectl delete pv awx-pv
 kubectl get pv
 kubectl get pvc -n awx
 kubectl delete pvc awx-projects-claim
-kubectl delete pvc awx-projects-claim -n awx
-kubectl get storageclass
-kubectl apply -f awx-pv.yaml
-kubectl apply -f awx-pvc.yaml
-kubectl get pv
-kubectl get pvc -n awx
 kubectl delete pvc awx-projects-claim -n awx
 kubectl get storageclass
 kubectl apply -f awx-pv.yaml
@@ -171,7 +166,7 @@ systemctl status qBitttorrent
 systemctl status qBittorrent
 cd /var/lib/awx/projects
 ls
-cd test1
+cd test1 
 ls
 cd ..
 ls -lh
@@ -185,6 +180,7 @@ ls
 cat kustomization.yaml
 cat awx-pv.yaml
 cat awx-pvc.yaml
-cat awx-storageclass.yaml
+cat awx-storageclass.yaml 
 reboot
-
+nano ~/.bash_history
+nano awx-pv.yaml
