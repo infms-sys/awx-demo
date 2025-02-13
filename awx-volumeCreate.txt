@@ -1,0 +1,190 @@
+pwd
+mkdir /var/lib/awx/projects
+sudo mkdir /var/lib/awx/projects
+ls
+cd var
+cd lib
+mkdir awx
+sudo mkdir awx/projects
+sudo mkdir awx
+cd awx
+sudo mkdir projects
+cd projects
+vi test.yaml
+sudo vi test.yaml
+groups
+sudo chown -R :nikola /var/lib/awx/projects
+sudo chmod -R 770 /var/lib/awx/projects
+sudo chmod -R 770 /var/lib/awx/projects
+ls -ld /var/lib/awx/projects
+sudo chmod g+s /var/lib/awx/projects
+which awx
+whitch awx
+propose find
+fine / -name "settings.py"
+find / -name "settings.py"
+sudo chmod -R 775 /var/lib/awx/projects
+sudo chmod g+s /var/lib/awx/projects
+ls -ld /var/lib/awx/projects
+users
+groups
+ls -ld /var/lib/awx/projects/ansible
+kubectl get pvc -n awx
+kubectl get pv -n awx
+ls -lh
+cd ansible
+ls -lh
+cd ..
+sudo chown -R nikola:nikola projects/
+cd projects
+ls -lh
+sudo rm -f test.yaml
+ls
+kubectl describe awx
+kubectl describe -n awx
+kubectl describe pod
+kubectl describe pod -n awx
+vi awx-pv.yaml
+vi awx-pvc.yaml
+kubectl apply -f awx-pv.yaml
+kubectl apply -f awx-pvc.yaml
+kubectl get pv
+kubectl get pvc
+vi awx.yaml
+kustomize build . | kubectl apply -f -
+kubectl get pvc -n awx
+kubectl get pv -n awx
+kubectl get pvc -n awx
+cd /var/lib/awx/projets
+cd /var/lib/awx/projects
+ls
+cd /home
+ls
+cd nikola
+cd /var/lib/
+ls
+rm -rf awx
+sudo rm -rf awx
+cd home/nikola
+cd /home/nikola/
+ls
+kubectl get pvc -n awx
+kubectl delete pvc awxubectl get pv
+kubectl delete pv awx-pv
+kubectl edit pv awx-pv
+kubectl delete pv awx-pv
+kubectl get pv
+kubectl apply -f awx-pv.yaml
+kubectl apply -f awx-pvc.yaml
+kubectl get pv
+kubectl get pvc
+kubectl apply -f awx.yaml
+cd /var/lib/awx/projects
+kubectl get pvc -n awx
+kubectl describe pvc awx-projects-claim -n awx
+vi awx-storageclass.yaml
+kubectl apply -f awx-storageclass.yaml
+kubectl get storageclass
+kubectl get pvc -n awx
+kubectl delete pvc awx-projects-claim -n awx
+kubectl apply -f awx-pvc.yaml
+kubectl get pvc -n awx
+kubectl delete pv awx-pv
+kubectl edit pv awx-pv
+kubectl delete pv awx-pv
+kubectl get pv
+kubectl get pvc -n awx
+kubectl delete pvc awx-projects-claim
+kubectl delete pvc awx-projects-claim -n awx
+kubectl get storageclass
+kubectl apply -f awx-pv.yaml
+kubectl apply -f awx-pvc.yaml
+kubectl get pv
+kubectl get pvc -n awx
+kubectl delete pvc awx-projects-claim -n awx
+kubectl get storageclass
+kubectl apply -f awx-pv.yaml
+kubectl apply -f awx-pvc.yaml
+kubectl get pv
+kubectl get pvc -n awx
+kubectl edit awx-projects-claim
+kubectl edit awx-projects-claim -n awx
+cat awx.yaml
+vi kustomization.yaml
+kustomize build . | kubectl apply -f -
+kubectl get pvc -n awx
+kubectl get pv
+kubectl get pv -n awx
+kubectl get pvc -n awx
+kubectl logs -f deployment/awx-operator -n awx
+kubectl delete pvc awx-projects-claim -n awx
+kubectl delete pvc awx-pvc -n awx
+kubectl get pv
+kubectl delete pvc awx-pv
+kubectl patch pv awx-pv -p '{"metadata":{"finalizers":null}}' --type=merge
+kubectl delete pv awx-pv --force --grace-period=0
+kubectl edit pv awx-pv
+kubectl delete pvc awx-pv
+kubectl get pv
+vi awx-pvc.yaml
+vi awx-pv.yaml
+vi awx.yaml
+kubectl apply -f awx-pv.yaml
+kubectl apply -f awx-pvc.yaml
+kustomize build . | kubectl apply -f -
+kubectl delete pvc awx-projects-claim -n awx
+kubectl delete pv awx-projects-volume
+kubectl edit pv awx-pv.yaml
+kubectl edit pv awx-pv.yaml -n awx
+kubectl edit pv awx-pv
+kubectl get pvc -n awx
+kubectl get pv
+kubectl delete pvc awx-projects-claim -n default
+kubectl get pv
+vi awx-pv.yaml
+kubectl apply -f awx-pv.yaml
+kubectl get pv
+vi awx-pvc.yaml
+kubectl apply -f awx-pvc.yaml
+kubectl get pv
+kubectl get pvc -n awx
+kubectl describe pv awx-projects-volume
+kubectl describe pvc awx-projects-claim -n awx
+cd /var/lib
+mkdir awx
+sudo mkdir awx
+sudo mkdir awx/projects
+ls
+cd awx
+ls
+ls -lh
+chown -R nikola:nikola
+sudo mkdir /projects/test1
+ls
+cd projects
+sudo mkdir test1
+cd test1
+sudo vi test.yaml
+sudo systemctl restart qBitttorrent
+systemctl list-units --type=service --state=running
+systemctl status qBitttorrent
+systemctl status qBittorrent
+cd /var/lib/awx/projects
+ls
+cd test1
+ls
+cd ..
+ls -lh
+mkdir test2
+touch test2/test2.yaml
+cd ..
+ls -lh
+cd
+cat awx.yaml
+ls
+cat kustomization.yaml
+cat awx-pv.yaml
+cat awx-pvc.yaml
+cat awx-storageclass.yaml
+reboot
+
