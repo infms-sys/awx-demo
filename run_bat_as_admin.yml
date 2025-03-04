@@ -1,0 +1,9 @@
+- name: Run Batch File with Admin Privileges
+  hosts: windows
+  tasks:
+    - name: Run batch file with admin rights
+      ansible.windows.win_shell: |
+        Start-Process -FilePath "C:\path\to\script.bat" -Verb RunAs
+      become: yes
+      become_method: runas
+      become_user: Administrator
