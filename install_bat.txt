@@ -1,0 +1,42 @@
+@echo off
+setlocal enabledelayedexpansion
+
+:: Откриване на услугата, свързана с MSI файла
+for /f "tokens=2 delims= " %%A in ('wmic service where "PathName like '%%%ProgramFiles%%\\%%YourAppFolder%%%%'" get Name /value ^| findstr Name') do (
+    set SERVICE_NAME=%%A
+)
+
+:: Проверка дали е намерена услуга
+if "%SERVICE_NAME%"=="" (
+    echo Не е открита услуга, продължавам с инсталацията...
+    goto INSTALL
+)
+
+echo Открита услуга: %SERVICE_NAME%
+
+:: Запазване на текущия потребител на услугата
+for /f "tokens=2 delims= " %%B in ('sc qc "%SERVICE_NAME%" ^| findstr /i "SERVICE_START_NAME"') do (
+    set CURRENT_USER=%%B
+)
+
+:: Ако няма зададен потребител, използвай LocalSystem
+if "!CURRENT_USER!"=="" set CURRENT_USER=LocalSystem
+
+echo Текущ потребител: !CURRENT_USER!
+
+:INSTALL
+:: Инсталирай MSI пакета
+start /wait msiexec /i "setup.msi" /passive
+
+:: Възстанови първоначалния потребител, ако има услуга
+if not "%SERVICE_NAME%"=="" (
+    sc config "%SERVICE_NAME%" obj= "!CURRENT_USER!"
+    
+    :: Рестартиране на услугата
+    net stop "%SERVICE_NAME%"
+    net start "%SERVICE_NAME%"
+)
+
+echo Инсталацията приключи успешно!
+pause
+exit
